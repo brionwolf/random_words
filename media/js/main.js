@@ -18,6 +18,9 @@ $("button#randomize").click(function(e){
   console.log("Collected the following \"" + words_array.length + "\" words:");
   console.log(words_array);
 
+  var number_of_words = parseInt($("input#number_of_words").val(), 10);
+  console.log(number_of_words);
+
   var selected_word = words_array[getRandom(1,words_array.length)];
   console.log("drawn_word: " + selected_word);
 });
