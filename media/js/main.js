@@ -1,6 +1,12 @@
 // Run on document load.
 $(document).ready(function() {});
 
+function getRandom(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
+
 // Randomize Button Functionality
 $("button#randomize").click(function(e){
   e.preventDefault(); // prevent page reload
@@ -11,4 +17,7 @@ $("button#randomize").click(function(e){
   // Send Success to Console.
   console.log("Collected the following \"" + words_array.length + "\" words:");
   console.log(words_array);
+
+  var selected_word = words_array[getRandom(1,words_array.length)];
+  console.log("drawn_word: " + selected_word);
 });
