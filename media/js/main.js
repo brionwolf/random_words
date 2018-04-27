@@ -21,6 +21,12 @@ $("button#randomize").click(function(e){
   var number_of_words = parseInt($("input#number_of_words").val(), 10);
   console.log(number_of_words);
 
-  var selected_word = words_array[getRandom(1,words_array.length)];
-  console.log("drawn_word: " + selected_word);
+  var random_words = [];
+  for (var i = 0; i < number_of_words; i++) {
+    var drawn_word = words_array[getRandom(1,words_array.length)];
+    console.log("Word " + i + ": " + drawn_word);
+    random_words.push(drawn_word);
+  }
+  console.log(random_words)
+
 });
