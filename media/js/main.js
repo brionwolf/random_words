@@ -23,11 +23,23 @@ $("button#randomize").click(function(e){
   console.log(number_of_words);
 
   var random_words = [];
+  var counter = 0;
   for (var i = 0; i < number_of_words; i++) {
-    var drawn_word = words_array[getRandom(1,words_array.length)];
-    console.log("Word " + i + ": " + drawn_word);
-    random_words.push(drawn_word);
+    time_out_label: while (random_words.length < number_of_words){
+      var drawn_word = words_array[getRandom(1,words_array.length)];
+      if (random_words.includes(drawn_word)){
+        counter++;
+        if (counter >= number_of_words*100){
+          console.log("Timed out")
+          break time_out_label;
+        }
+        continue
+      } else {
+        random_words.push(drawn_word);
+      }
+    }
   }
-  console.log(random_words)
+
+  console.log(random_words);
 
 });
