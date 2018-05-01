@@ -8,6 +8,12 @@ function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+// Reset page
+$("button#reset").click(function(e){
+  e.preventDefault();
+  window.location.reload(true);
+});
+
 // Randomize Button Functionality.
 $("button#randomize").click(function(e){
   e.preventDefault();
@@ -50,7 +56,7 @@ $("button#randomize").click(function(e){
   }
 
   // Post random_words array to DOM.
-  console.log("random_words:")
+  console.log("random_words:");
   console.log(random_words);
   $(".result").empty();
   random_words.forEach(function(word){
