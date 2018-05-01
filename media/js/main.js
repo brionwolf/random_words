@@ -36,7 +36,9 @@ $("button#randomize").click(function(e){
         counter++;
         if (counter >= number_of_words*100){
           // Cause the function to timeout if it's made too many draw attempts based on the counter.
-          console.log("Timed our word picker.");
+          console.log("Timed out word picker.");
+          random_words = [];
+          random_words[0] = "There was an error, check your entry and try again."
           break time_out_label;
         }
         continue
