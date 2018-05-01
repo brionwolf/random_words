@@ -47,8 +47,13 @@ $("button#randomize").click(function(e){
     }
   }
 
-  // Completed random_words array.
+  // Post random_words array to DOM.
   console.log("random_words:")
   console.log(random_words);
+  $(".result").empty();
+  random_words.forEach(function(word){
+    $(".result").append("<li>" + word + "</li>");
+  });
+  $(".result li").addClass("list-group-item");
 
 });
