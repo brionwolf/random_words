@@ -11,7 +11,12 @@ function getRandom(min, max) {
 // Reset page
 $("button#reset").click(function(e){
   e.preventDefault();
-  window.location.reload(true);
+  $(".result").empty();
+  $(".result").append("<li>Nothing here yet...</li>");
+  $(".result li").addClass("list-group-item nothing_here");
+  $("#words_to_randomize").val("");
+  $("#number_of_words").val(3);
+  console.log("Random Words form reset.");
 });
 
 // Randomize Button Functionality.
