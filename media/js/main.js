@@ -13,7 +13,7 @@ $("button#randomize").click(function(e){
   // Collect value from input field, clean it, and place words in an array
   var words_to_randomize = $("input#words_to_randomize").val();
   words_to_randomize = words_to_randomize.replace(/\s+/g, '');
-  var words_array = words_to_randomize.split(",")
+  var words_array = words_to_randomize.split(",").filter(Boolean);
   var words_array = Array.from(new Set(words_array))
   // Send Success to Console.
   console.log("Collected the following \"" + words_array.length + "\" words:");
