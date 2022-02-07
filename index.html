@@ -1,58 +1,100 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <title>Random Words</title>
 
     <!-- Styles CSS -->
-    <link rel="stylesheet" type="text/css" href="media/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="media/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="media/css/style.css">
+    <link rel="stylesheet" type="text/css" href="media/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="media/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="media/css/style.css" />
   </head>
   <body>
-
-    <div class="container">
-      <div class="card">
-        <div class="card-body">
-          <form>
-            <div class="form-row">
-              <div class="col">
-                <div class="form-group">
-                  <label for="words_to_randomize">Words to randomize</label>
-                  <input type="text" class="form-control" id="words_to_randomize" aria-describedby="emailHelp" placeholder="Enter words...">
-                  <small id="emailHelp" class="form-text text-muted">All words must be comma separated</small>
+    <main>
+      <div class="container">
+        <div class="card">
+          <div class="card-body">
+            <form>
+              <div class="form-row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="words_to_randomize">Words to randomize</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="words_to_randomize"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter words..."
+                    />
+                    <small id="emailHelp" class="form-text text-muted"
+                      >All words must be comma separated</small
+                    >
+                  </div>
                 </div>
-              </div> <!-- END input#words_to_randomize -->
-              <div class="col">
-                <div class="form-group">
-                  <label for="number_of_words">How many should be selected?</label>
-                  <input type="number" class="form-control" id="number_of_words" aria-describedby="emailHelp" value="3">
+                <!-- END input#words_to_randomize -->
+                <div class="col">
+                  <div class="form-group">
+                    <label for="number_of_words"
+                      >How many should be selected?</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="number_of_words"
+                      aria-describedby="emailHelp"
+                      value="3"
+                    />
+                  </div>
                 </div>
               </div>
-            </div> <!-- END input#number_of_words -->
-            <button type="submit" class="btn btn-primary" id="randomize">Randomize</button>
-            <button type="button" class="btn btn-secondary" id="reset">reset</button>
-          </form> <!-- END form -->
+              <!-- END input#number_of_words -->
+              <button type="submit" class="btn btn-primary" id="randomize">
+                Randomize
+              </button>
+              <button type="button" class="btn btn-secondary" id="reset">
+                reset
+              </button>
+            </form>
+            <!-- END form -->
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <div class="card-header">
-          Result
+        <div class="card">
+          <div class="card-header">Result</div>
+          <ul class="list-group list-group-flush result">
+            <li class="list-group-item nothing_here">Nothing here yet...</li>
+          </ul>
         </div>
-        <ul class="list-group list-group-flush result">
-          <li class="list-group-item nothing_here">Nothing here yet...</li>
-        </ul>
       </div>
-    </div> <!-- END div.container -->
+      <!-- END div.container -->
+    </main>
 
     <!-- Javascript -->
     <!-- Bootstrap -->
-    <script type="text/javascript" charset="utf-8" src="media/js/jquery-3.3.1.slim.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="media/js/popper.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="media/js/bootstrap.min.js"></script>
+    <script
+      type="text/javascript"
+      charset="utf-8"
+      src="media/js/jquery-3.3.1.slim.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf-8"
+      src="media/js/popper.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      charset="utf-8"
+      src="media/js/bootstrap.min.js"
+    ></script>
     <!-- Main js -->
-    <script type="text/javascript" charset="utf-8" src="media/js/main.js"></script>
+    <script
+      type="text/javascript"
+      charset="utf-8"
+      src="media/js/main.js"
+    ></script>
   </body>
 </html>
